@@ -7,11 +7,12 @@ import com.algolia.search.saas.android.BuildConfig;
 import org.junit.After;
 import org.junit.Before;
 import org.junit.runner.RunWith;
+import org.robolectric.RobolectricTestRunner;
 import org.robolectric.annotation.Config;
 import org.robolectric.shadows.ShadowLog;
 
 @Config(shadows = {ShadowLog.class}, manifest = Config.NONE, constants = BuildConfig.class, sdk = Build.VERSION_CODES.LOLLIPOP)
-@RunWith(CustomRunner.class)
+@RunWith(RobolectricTestRunner.class)
 public abstract class RobolectricTestCase {
 
     @Before
